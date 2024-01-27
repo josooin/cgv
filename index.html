@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detecion" content="telephone=no">
+  <title>CGV_반응형웹사이트</title>
+  <!-- 1. reset -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
+  <!-- 2. base -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+
+  <!-- 3. mobile해상도에 맞는 서식 (기준서식) -->
+  <!-- <link href="./css/mobile.css" rel="stylesheet" type="text/css"> -->
+
+  <!-- 4. tablet해상도에 맞는 서식 -->
+  <!-- <link href="./css/tablet.css" rel="stylesheet" type="text/css"> -->
+
+  <!-- 5. pc해상도에 맞는 서식 -->
+  <link href="./css/pc.css" rel="stylesheet" type="text/css">
+
+  <!-- 제이쿼리 라이브러리 연결하기 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <!-- 메인 제이쿼리 -->
+  <script src="./script/gallery.js"></script>
+
+  <!-- 팝업 제이쿼리 -->
+  <script src="./script/jquery.cookie.js"></script>
+
+
+  <!-- 폰트어썸 아이콘폰트 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  <!-- 헤더영역 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+        <img src="./images/logoRed.png" alt="상단로고">
+      </a>
+      <span>CULTUREPLEX</span>
+    </h1>
+    <!-- 모바일 버전에서 나오는 토글버튼(햄버거) -->
+    <div id="toggle">
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+    </div>
+
+    <!-- 메인메뉴 -->
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="영화">영화<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="무비차트">무비차트</a></li>
+            <li><a href="#" title="아트하우스">아트하우스</a></li>
+            <li><a href="#" title="ICECON">ICECON</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="극장">극장<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="CGV 극장">CGV 극장</a></li>
+            <li><a href="#" title="특별관">특별관</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="예매">예매<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="빠른예매">빠른예매</a></li>
+            <li><a href="#" title="상영스케줄">상영스케줄</a></li>
+            <li><a href="#" title="English Ticketing">English Ticketing</a></li>
+            <li><a href="#" title="English Schedule">English Schedule</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="스토어">스토어<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="패키지">패키지</a></li>
+            <li><a href="#" title="영화관람권">영화관람권</a></li>
+            <li><a href="#" title="기프트카드">기프트카드</a></li>
+            <li><a href="#" title="콤보">콤보</a></li>
+            <li><a href="#" title="팝콘">팝콘</a></li>
+            <li><a href="#" title="음료">음료</a></li>
+            <li><a href="#" title="스낵">스낵</a></li>
+            <li><a href="#" title="플레이존">플레이존</a></li>
+            <li><a href="#" title="씨네샵">씨네샵</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="이벤트">이벤트<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="SPECIAL">SPECIAL</a></li>
+            <li><a href="#" title="영화/예매">영화/예매</a></li>
+            <li><a href="#" title="멤버십/CLUB">멤버십/CLUB</a></li>
+            <li><a href="#" title="CGV 극장별">CGV 극장별</a></li>
+            <li><a href="#" title="제휴할인">제휴할인</a></li>
+            <li><a href="#" title="당첨자 발표">당첨자 발표</a></li>
+            <li><a href="#" title="종료된 이벤트">종료된 이벤트</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="혜택">혜택<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="CGV 할인정보">CGV 할인정보</a></li>
+            <li><a href="#" title="CLUB 서비스">CLUB 서비스</a></li>
+            <li><a href="#" title="VIP 라운지">VIP 라운지</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인영역 시작 -->
+  <main>
+    <!-- 1. 메인슬라이드 -->
+    <article class="visual">
+      <h2>메인슬라이드</h2>
+      <div class="slide1">
+        <video src="./videos/cnt1_1.mp4" loop="" autoplay="" muted=""></video>
+      </div>
+      <div class="slide2">
+        <video src="./videos/cnt1_2.mp4" loop="" autoplay="" muted=""></video>
+      </div>
+      <div class="slide3">
+        <video src="./videos/cnt1_3.mp4" loop="" autoplay="" muted=""></video>
+      </div>
+
+      <!-- 공통 ui구성요소 sns, 콘트롤버튼, 좌,우버튼 -->
+
+      <!-- 좌, 우 방향버튼 -->
+      <ul class="s_btn">
+        <li><img src="./images/left.png" alt="이전버튼"></li>
+        <li><img src="./images/right.png" alt="다음버튼"></li>
+      </ul>
+
+      <!-- 콘트롤버튼 -->
+      <ul class="ctrl_btn">
+        <li class="on">&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+      </ul>
+    </article>
+
+
+    <!-- 2. 무비차트 -->
+    <section class="event">
+      <h2>무비차트</h2>
+      <article class="e_slide">
+        <div class="es_wrap">
+          <div>
+            <a href="#" title="">
+              <img src="./images/cnt2_1.jpg" alt="">
+              <h3>외계+인 2부</h3>
+              <span>예매율 25.1%</span>
+              <div class="e_txt">
+                <h4>1</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_2.jpg" alt="">
+              <h3>시민덕희</h3>
+              <span>예매율 11.9%</span>
+              <div class="e_txt">
+                <h4>2</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_3.jpg" alt="">
+              <h3>웡카</h3>
+              <span>예매율 25.1%</span>
+              <div class="e_txt">
+                <h4>3</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_4.jpg" alt="">
+              <h3>지오디 마스터피스 더 무비</h3>
+              <span>예매율 1.6%</span>
+              <div class="e_txt">
+                <h4>4</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_5.jpg" alt="">
+              <h3>위시</h3>
+              <span>예매율 15.4%</span>
+              <div class="e_txt">
+                <h4>5</h4>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#" title="">
+              <img src="./images/cnt2_6.jpg" alt="">
+              <h3>덤 머니</h3>
+              <span>예매율 3.0%</span>
+              <div class="e_txt">
+                <h4>6</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_7.jpg" alt="">
+              <h3>걸즈 앤 판처 최종장 제4화</h3>
+              <span>예매율 1.2%</span>
+              <div class="e_txt">
+                <h4>7</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_8.jpg" alt="">
+              <h3>서울의 봄</h3>
+              <span>예매율 7.9%</span>
+              <div class="e_txt">
+                <h4>8</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_9.jpg" alt="">
+              <h3>인투 더 월드</h3>
+              <span>예매율 3.8%</span>
+              <div class="e_txt">
+                <h4>9</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_10.jpg" alt="">
+              <h3>노량</h3>
+              <span>예매율 5.2%</span>
+              <div class="e_txt">
+                <h4>10</h4>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="#" title="">
+              <img src="./images/cnt2_11.jpg" alt="">
+              <h3>라라랜드</h3>
+              <span>예매율 11.3%</span>
+              <div class="e_txt">
+                <h4>11</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_12.jpg" alt="">
+              <h3>스즈메의 문단속</h3>
+              <span>예매율 2.1%</span>
+              <div class="e_txt">
+                <h4>12</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_13.jpg" alt="">
+              <h3>클럽제로</h3>
+              <span>예매율 17.1%</span>
+              <div class="e_txt">
+                <h4>13</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_14.jpg" alt="">
+              <h3>추락의 해부</h3>
+              <span>예매율 8.5%</span>
+              <div class="e_txt">
+                <h4>14</h4>
+              </div>
+            </a>
+            <a href="#" title="">
+              <img src="./images/cnt2_15.jpg" alt="">
+              <h3>아가일</h3>
+              <span>예매율 3.4%</span>
+              <div class="e_txt">
+                <h4>15</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+      <i class="fas fa-angle-left"></i>
+      <i class="fas fa-angle-right"></i>
+    </section>
+
+    <!-- 3. 특별관 -->
+    <section class="tab_con">
+      <article>
+        <h2>특별관</h2>
+        <ul class="tab_con_wrap">
+          <li>
+            <a href="#" title="SUITE CINEMA"  class="act">SUITE CINEMA</a>
+            <div class="cont">
+              <dl>
+                <dt>SUITE CINEMA</dt>
+                <dd>The Moment of Exclusivity<br>
+                  집보다 더 프라이빗하게<br>
+                  호텔보다 더 프리미엄하게<br>
+                  우리만의 Sweet Time, Suite Cinema</dd>
+              </dl>
+              <img src="./images/cnt3_1.png" alt="">
+            </div>
+          </li>
+          <li>
+            <a href="#" title="CINE & LIVING ROOM">CINE & LIVING ROOM</a>
+            <div class="cont">
+              <dl>
+                <dt>CINE & LIVING ROOM</dt>
+                <dd>내 집 같이 편안하고 세련된<br> 거실의 무드와 감성을 담은 신개념 소셜 상영관입니다.</dd>
+              </dl>
+              <img src="./images/cnt3_2.png" alt="">
+            </div>
+          </li>
+          <li>
+            <a href="#" title="4DX">4DX</a>
+            <div class="cont">
+              <dl>
+                <dt>4DX</dt>
+                <dd>4DX 상영관은 영화의 장면에 맞추어 움직이는 모션시트와 더불어<br>
+                  바람, 빛, 안개, 향기, 진동 등의 다양한 환경 효과를 느낄 수 있는<br>
+                  오감 체험 특별 상영관입니다.</dd>
+              </dl>
+              <img src="./images/cnt3_3.png" alt="">
+            </div>
+          </li>
+          <li>
+            <a href="#" title="CINE de CHEF">CINE de CHEF</a>
+            <div class="cont">
+              <dl>
+                <dt>CINE de CHEF</dt>
+                <dd>미국의 신문왕 윌리엄 랜돌프 허스트는 가장 소중한 손님을 모실 때,<br>
+                  그의 개인 전용 영화관에서 최고의 쉐프들이 준비하는 만찬과 함께<br>
+                  영화의 즐거움을 나누었다고 합니다.<br>
+                  이제 씨네드쉐프가 50년 전 그 곳에 명사들이 경험했던<br>
+                  특별한 초대의 시간에 진정한 품격을 더합니다.</dd>
+              </dl>
+              <img src="./images/cnt3_4.png" alt="">
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 4. 메인 예고편 -->
+    <section class="news_con">
+      <article class="youtube">
+        <h2>메인예고편<span>서울의 봄</span></h2>
+        <div>
+          <iframe src="https://www.youtube.com/embed/-AZ7cnwn2YI" title="&#39;111초의 압도적 긴장감&#39;, [서울의 봄] 메인 예고편" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <!-- frameborder="0" 는 삭제(현재 없어짐) -->
+          <p>
+            1979년 12월 12일, 수도 서울 군사반란 발생<br>
+            그날, 대한민국의 운명이 바뀌었다.<br><br>
+
+            대한민국을 뒤흔든 10월 26일 이후,<br>
+            서울에 새로운 바람이 불어온 것도 잠시<br>
+            12월 12일, 보안사령관 전두광이 반란을 일으키고<br>
+            군 내 사조직을 총동원하여 최전선의 전방부대까지 서울로 불러들인다.<br><br>
+            
+            권력에 눈이 먼 전두광의 반란군과<br>
+            이에 맞선 수도경비사령관 이태신을 비롯한 진압군 사이,<br>
+            일촉즉발의 9시간이 흘러가는데…<br>
+            목숨을 건 두 세력의 팽팽한 대립<br>
+            오늘 밤, 대한민국 수도에서 가장 치열한 전쟁이 펼쳐진다!</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- 5. 예매 -->
+    <section class="ticketing">
+      <article>
+        <h2 class="title2">예매</h2>
+        <ul>
+          <li class="t_wrap">
+            <ul>
+              <h3>패키지</h3>
+              <a href="#" title="더보기" class="plus_btn">더보기</a>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_1.jpg" alt="패키지1">
+              <li>우리 패키지<br>61,000원</li>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_2.jpg" alt="패키지2">
+              <li>나랑 너 패키지<br>34,000원</li>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_3.jpg" alt="패키지3">
+              <li>좋은 날 패키지<br>18,000원</li>
+            </ul>
+          </li>
+          <li class="t_wrap">
+            <ul>
+              <h3>영화관람권</h3>
+              <a href="#" title="더보기" class="plus_btn">더보기</a>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_4.jpg" alt="패키지4">
+              <li>CGV 골드클래스<br>40,000원</li>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_5.jpg" alt="패키지5">
+              <li>CGV 영화관람권<br>13,000원</li>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_6.jpg" alt="패키지6">
+              <li>4DX관람권<br>19,000원</li>
+            </ul>
+          </li>
+          <li class="t_wrap">
+            <ul>
+              <h3>기프트카드</h3>
+              <a href="#" title="더보기" class="plus_btn">더보기</a>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_7.jpg" alt="패키지7">
+              <li>파코니의 여름<br>금액충전형</li>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_8.jpg" alt="패키지8">
+              <li>파코니의 썸머파티<br>금액충전형</li>
+            </ul>
+            <ul>
+              <img src="./images/cnt5_9.jpg" alt="패키지9">
+              <li>PACONNIE A형<br>금액충전형</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+
+
+    <!-- 6. 이벤트 -->
+    <section class="gallery">
+      <article>
+        <h2>EVENT</h2>
+        <div class="girl">
+          <figure>
+            <a href="./images/cnt6_1.jpg" title="TV광고">
+              <img src="./images/cnt6_1.jpg" alt="TV광고">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_1.jpg" title="TV광고">
+                <h6>CJ 7대 브랜드에서 포인트 받자!</h6>
+                <p>CJ ONE 프리즘 신한카드</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+    
+          <figure>
+            <a href="./images/cnt6_2.png" title="">
+              <img src="./images/cnt6_2.png" alt="">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_2.png" title="">
+                <h6>이벤트 참여 시 영화관람권, 씨네드쉐프!</h6>
+                <p>SK 증권</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+    
+          <figure>
+            <a href="./images/cnt6_3.jpg" title="">
+              <img src="./images/cnt6_3.jpg" alt="">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_3.jpg" title="">
+                <h6>CGV 영화관람권 10매 증정!</h6>
+                <p>롯데카드</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+    
+          <figure>
+            <a href="./images/cnt6_4.png" title="">
+              <img src="./images/cnt6_4.png" alt="">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_4.png" title="">
+                <h6>모든영화 1만원 할인쿠폰 지급받자!</h6>
+                <p>삼성화재 다이렉트</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+    
+          <figure>
+            <a href="./images/cnt6_5.jpg" title="">
+              <img src="./images/cnt6_5.jpg" alt="">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_5.jpg" title="">
+                <h6>영화티켓 1,000원 즉시할인!</h6>
+                <p>toss</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+    
+          <figure>
+            <a href="./images/cnt6_6.jpg" title="">
+              <img src="./images/cnt6_6.jpg" alt="">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_6.jpg" title="">
+                <h6>VIP콕으로 영화무료 콕!</h6>
+                <p>U+멤버십</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+    
+          <figure>
+            <a href="./images/cnt6_7.jpg" title="">
+              <img src="./images/cnt6_7.jpg" alt="">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_7.jpg" title="">
+                <h6>해피캐시로 즐거운 문화생활!</h6>
+                <p>해피머니</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+    
+          <figure>
+            <a href="./images/cnt6_8.jpg" title="">
+              <img src="./images/cnt6_8.jpg" alt="">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_8.jpg" title="">
+                <h6>캐시로 충전해서 영화예매 하자!</h6>
+                <p>도서문화상품권</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <a href="./images/cnt6_9.jpg" title="">
+              <img src="./images/cnt6_9.jpg" alt="">
+            </a>
+            <figcaption>
+              <a href="./images/cnt6_9.jpg" title="">
+                <h6>CGV X BUGS 이용권 출시</h6>
+                <p>BUGS</p>
+                <span class="caption">바로가기</span>
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- 푸터영역 시작 -->
+  <footer>
+    <a href="#" title="위로 바로가기" class="t_btn">
+      <img src="./images/top_up.png" alt="위로 바로가기">
+    </a>
+
+    <div class="f_inner">
+      <nav>
+        <dl>
+          <dt><a href="#" title="회사소개">회사소개</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="지속가능경영">지속가능경영</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="IR">IR</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="채용정보">채용정보</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="광고/제휴/출점문의">광고/제휴/출점문의</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="이용약관">이용약관</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="편성기준">편성기준</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="개인정보처리방침">개인정보처리방침</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="법적고지">법적고지</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="이메일주소무단수집거부">이메일주소무단수집거부</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="윤리경영">윤리경영</a></dt>
+        </dl>
+        <dl>
+          <dt><a href="#" title="사이버감사실">사이버감사실</a></dt>
+        </dl>
+      </nav>
+    </div>
+    <address>
+      <p>(00000)서울특별시 00구 00대로 00길 00<br>
+        대표이사 : 000<br>
+        사업자등록번호 : 000-00-00000 · 통신판매업신고번호 : 0000-0000-0000 사업자정보확인<br>
+        호스팅사업자 : 00000 · 개인정보보호 책임자 : 000 · 대표이메일 : whtndls330@gmail.com<br>
+        © CJ CGV. All Rights Reserved </p>
+        <!-- sns아이콘 -->
+      <ul class="sns">
+        <li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#" title=""><i class="fab fa-youtube"></i></a></li>
+        <li><a href="#" title=""><i class="fab fa-twitter"></i></a></li>
+      </ul>
+    </address>
+  </footer>
+</body>
+</html>
