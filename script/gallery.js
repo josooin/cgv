@@ -65,8 +65,8 @@ $(document).ready(function(){
     v_slide_img.eq(i).stop().fadeIn();
   }
 
-  //3. 매 5초마다 함수를 반복호출하여 슬라이드가 변하게한다.
-  let Timer = setInterval(fadeInOut,5000);
+  //3. 매 30초마다 함수를 반복호출하여 슬라이드가 변하게한다.
+  let Timer = setInterval(fadeInOut,30000);
 
   //좌, 우 버튼 클릭시 해당하는 방향으로 슬라이드 이미지가 나오게하기
   l_btn.click(function(){
@@ -80,7 +80,7 @@ $(document).ready(function(){
   $('.s_btn > li').hover(function(){
     clearInterval(Timer);
   },function(){//다시 마우스 아웃시 시간을 생성하여 다시 움직이게 한다.
-    Timer = setInterval(fadeInOut, 5000);
+    Timer = setInterval(fadeInOut, 30000);
   });
 
   //pagenation(콘트롤 버튼)
@@ -114,7 +114,7 @@ $(document).ready(function(){
   });
   //콘트롤버튼에 마우스 아웃시 다시 시간을 넣어서 다시 슬라이드 움직이게
   c_btn.mouseleave(function(){
-    Timer = setInterval(fadeInOut, 5000);
+    Timer = setInterval(fadeInOut, 30000);
   });
 
   //윈도우창의 너비값  = $(window).width();  or $(window).height();
@@ -165,7 +165,7 @@ $(document).ready(function(){
       //만약 인덱스가 2라면(3번째 li태그)
       if(i==2){
         //부모박스 높이를 키우고
-        $('.tab_con article').height(800);
+        $('.tab_con article').height(500);
       }else{
         //그렇지 않으면(0,1일때) 원래높이로 설정함.
         $('.tab_con article').height(500);
@@ -221,7 +221,7 @@ $(document).ready(function(){
     });
   }
   //시간객체를 사용하여 4초마다 움직이도록 한다.
-  let Timer2 = setInterval(moveLeft, 4000);
+  let Timer2 = setInterval(moveLeft, 5000);
 
   //moveright함수
   function moveRight(){
@@ -272,7 +272,7 @@ $(document).ready(function(){
         <i class= "fas fa-times"></i>
         <i class= "fas fa-angle-left"></i>
         <i class= "fas fa-angle-right"></i>
-        <span class="p_num">${i}/8</span>
+        <span class="p_num">${i}/9</span>
       </div>
     </div>
     `;
@@ -287,7 +287,7 @@ $(document).ready(function(){
     // 좌, 우 버튼 클릭 시 각각 함수 작성하기
     $('.modal i.fa-angle-left').click(function(){
       if(i==1){
-        i=8;
+        i=9;
       }else{
         i--;
       }
@@ -296,7 +296,7 @@ $(document).ready(function(){
     });
 
     $('.modal i.fa-angle-right').click(function(){
-      if(i==8){
+      if(i==9){
         i=1;
       }else{
         i++;
@@ -310,18 +310,20 @@ $(document).ready(function(){
     function dataChange(i){
 
       // 1. 페이지 번호
-      $('.modal .p_num').text(i+'/8');
+      $('.modal .p_num').text(i+'/9');
 
       // 2. 인덱스번호에 맞는 제목 변경되어야...
       $('.modal h3').text($('.g_list li').eq(i-1).find('.caption').text());
 
       // 3. 인덱스번호에 맞는 이미지 출력하기
-      if(i==3||i==4||i==7){
-        $('.modal img').attr('src','./images/mcon5_'+i+'.png');
+      if(i==2||i==4){
+        $('.modal img').attr('src','./images/cnt6_'+i+'.png');
       }else
-        $('.modal img').attr('src','./images/mcon5_'+i+'.jpg');
+        $('.modal img').attr('src','./images/cnt6_'+i+'.jpg');
 
     };
+
+    return false;
   });
 
     // 윈도우 세로 스크롤값을 구하여
